@@ -1,7 +1,7 @@
 package main
 
 import (
-	"bhourigan/packer-post-processor-ami/ami"
+	"github.com/bhourigan/post-processor-consul/consul"
 	"github.com/mitchellh/packer/packer/plugin"
 )
 
