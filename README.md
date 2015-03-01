@@ -1,8 +1,14 @@
 This packer post processing plugin will insert AMI IDs and other image data into a consul
-key for later retrieval by terraform or other software that consumes consul kv data.
+key for later retrieval by terraform or other software that consumes consul.
 
-It's still alpha, and needs to be polished and support added to nubis-builder. I'm using it
-by dropping consul.json in projects/builder in my project.
+It's still alpha (pre alpha?), and needs some polishing. The plan is to integrate support
+for this directly into nubis-builder so no end user configuration other than the address
+and token will be required.
+
+Here's how I am using it during development.
+
+Build this module and drop the binary into ~/.packer.d/plugins, add the following post
+processor into $project_path/nubis/builder
 
 ```
 {
