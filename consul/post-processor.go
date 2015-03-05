@@ -136,7 +136,7 @@ func (p *PostProcessor) PostProcess(ui packer.Ui, artifact packer.Artifact) (pac
 		        client, err := api.NewClient(config)
 		        if err == nil {
 				kv := client.KV()
-				consul_key_prefix := fmt.Sprintf("aws/%s/%s/%s", images.Images[0].RootDeviceType, p.config.ProjectName, p.config.ProjectVersion)
+				consul_key_prefix := fmt.Sprintf("aws/%s/%s/%s", p.config.ProjectName, images.Images[0].RootDeviceType, p.config.ProjectVersion)
 
 				ui.Message(fmt.Sprintf("Putting %s image data into consul key prefix %s in datacenter %s",
 					parts[1], consul_key_prefix, config.Datacenter))
