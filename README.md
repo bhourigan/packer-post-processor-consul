@@ -11,7 +11,8 @@ $ go get github.com/bhourigan/post-processor-consul
 $ cd ~/gocode/src/github.com/bhourigan/post-processor-consul && make
 
 Copy the resulting 'post-processor-consul' binary to your packer binary directory (such as
-~/gocode/bin if you're building packer from source) or into ~/.packer.d/plugins.
+~/gocode/bin if you're building packer from source) or into ~/.packer.d/plugins as
+'packer-post-processor-consul'
 
 If you're using nubis-builder all you need to do is add consul_address into your secrets,
 and it will automatically load packer/post-processors/consul.json during run time (take a
